@@ -1,5 +1,5 @@
 import pytest
-from decouple import strtobool
+from decouple_plus import strtobool
 
 
 @pytest.mark.parametrize("value", ("Y", "YES", "T", "TRUE", "ON", "1"))
@@ -15,4 +15,3 @@ def test_false_values(value):
 def test_invalid():
     with pytest.raises(ValueError, match="Invalid truth value"):
         strtobool("MAYBE")
-

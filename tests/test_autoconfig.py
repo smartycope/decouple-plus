@@ -2,7 +2,7 @@
 import os
 import pytest
 from mock import patch, mock_open
-from decouple import AutoConfig, UndefinedValueError, RepositoryEmpty, DEFAULT_ENCODING
+from decouple_plus import AutoConfig, UndefinedValueError, RepositoryEmpty, DEFAULT_ENCODING
 
 
 def test_autoconfig_env():
@@ -83,7 +83,7 @@ def test_autoconfig_ini_default_encoding():
     path = os.path.join(os.path.dirname(__file__), 'autoconfig', 'ini', 'project')
     filename = os.path.join(os.path.dirname(__file__), 'autoconfig', 'ini', 'project', 'settings.ini')
     with patch.object(config, '_caller_path', return_value=path):
-        with patch('decouple.open', mock_open(read_data='')) as mopen:
+        with patch('decouple_plus.open', mock_open(read_data='')) as mopen:
             assert config.encoding == DEFAULT_ENCODING
             assert 'ENV' == config('KEY', default='ENV')
             mopen.assert_called_once_with(filename, encoding=DEFAULT_ENCODING)
@@ -93,7 +93,7 @@ def test_autoconfig_env_default_encoding():
     path = os.path.join(os.path.dirname(__file__), 'autoconfig', 'env', 'project')
     filename = os.path.join(os.path.dirname(__file__), 'autoconfig', 'env', '.env')
     with patch.object(config, '_caller_path', return_value=path):
-        with patch('decouple.open', mock_open(read_data='')) as mopen:
+        with patch('decouple_plus.open', mock_open(read_data='')) as mopen:
             assert config.encoding == DEFAULT_ENCODING
             assert 'ENV' == config('KEY', default='ENV')
             mopen.assert_called_once_with(filename, encoding=DEFAULT_ENCODING)

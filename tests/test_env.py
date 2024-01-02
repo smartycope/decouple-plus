@@ -3,7 +3,7 @@ import os
 import sys
 from mock import patch
 import pytest
-from decouple import Config, RepositoryEnv, UndefinedValueError
+from decouple_plus import Config, RepositoryEnv, UndefinedValueError
 
 
 # Useful for very coarse version differentiation.
@@ -53,7 +53,7 @@ KeyHasMixedQuotesAsData2='Y"
 
 @pytest.fixture(scope='module')
 def config():
-    with patch('decouple.open', return_value=StringIO(ENVFILE), create=True):
+    with patch('decouple_plus.open', return_value=StringIO(ENVFILE), create=True):
         return Config(RepositoryEnv('.env'))
 
 

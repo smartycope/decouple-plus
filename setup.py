@@ -3,15 +3,15 @@ from setuptools import setup
 import os
 
 
-README = os.path.join(os.path.dirname(__file__), 'README.rst')
+README = os.path.join(os.path.dirname(__file__), 'README.md')
 
-setup(name='python-decouple',
+setup(name='decouple_plus',
       version='3.8',
       description='Strict separation of settings from code.',
       long_description=open(README).read(),
-      author="Henrique Bastos", author_email="henrique@bastos.net",
+      author="Copeland Carter", author_email="smartycope@gmail.com",
       license="MIT",
-      py_modules=['decouple'],
+      py_modules=['decouple_plus'],
       zip_safe=False,
       platforms='any',
       include_package_data=True,
@@ -27,4 +27,4 @@ setup(name='python-decouple',
           'Programming Language :: Python :: 3',
           'Topic :: Software Development :: Libraries',
       ],
-      url='http://github.com/henriquebastos/python-decouple/',)
+      url='https://github.com/smartycope/decouple-plus',)

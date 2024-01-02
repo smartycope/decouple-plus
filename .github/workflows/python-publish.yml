@@ -1,6 +1,8 @@
 # This workflows will upload a Python Package using Twine when a release is created
 # For more information see: https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions#publishing-to-package-registries
 
+This is an intentional syntax error until I can figure out how this works exactly, and I'm ready to publish on PyPi
+/sd;sas''faos[epijfa/sdf.,$%%-{}}}{]'
 name: Upload Python Package
 
 on:

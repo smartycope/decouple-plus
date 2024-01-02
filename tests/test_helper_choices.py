@@ -1,6 +1,6 @@
 # coding: utf-8
 import pytest
-from decouple import Choices
+from decouple_plus import Choices
 
 
 FRUIT_APPLE = 'apple'

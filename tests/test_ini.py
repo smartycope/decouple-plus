@@ -3,7 +3,7 @@ import os
 import sys
 from mock import patch, mock_open
 import pytest
-from decouple import Config, RepositoryIni, UndefinedValueError
+from decouple_plus import Config, RepositoryIni, UndefinedValueError
 
 # Useful for very coarse version differentiation.
 PY3 = sys.version_info[0] == 3
@@ -39,7 +39,7 @@ KeyOverrideByEnv=NotThis
 
 @pytest.fixture(scope='module')
 def config():
-    with patch('decouple.open', return_value=StringIO(INIFILE), create=True):
+    with patch('decouple_plus.open', return_value=StringIO(INIFILE), create=True):
         return Config(RepositoryIni('settings.ini'))
 
 

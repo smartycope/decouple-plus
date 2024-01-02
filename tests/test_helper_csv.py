@@ -1,5 +1,5 @@
 # coding: utf-8
-from decouple import Csv
+from decouple_plus import Csv
 
 
 def test_csv():

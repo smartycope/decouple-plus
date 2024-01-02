@@ -2,7 +2,7 @@
 import os
 import pytest
 
-from decouple import Config, RepositorySecret
+from decouple_plus import Config, RepositorySecret
 
 
 def test_secrets():
